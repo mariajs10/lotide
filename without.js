@@ -18,6 +18,7 @@ const without = function (A,B) {
   return result;
 }
 
+//function to compare arrays and return result
 const eqArrays = function (a, b) {
   if (a.length !== b.length) {
     return false;
@@ -31,10 +32,10 @@ const eqArrays = function (a, b) {
   }
 };
 
-
+//function to print assertion message according to array comparison
 const assertArraysEqual = function (actual, remove, answer) {
   let ourAnswer = without(actual,remove);
-  if(eqArrays(ourAnswer,answer)) {
+  if(eqArrays(ourAnswer,answer)) { // if resultof array cpmparison is true then pass
     console.log(`✅✅✅Assertion Passed: ${ourAnswer} === ${answer}`);
   } else {
     console.log(`🛑🛑🛑  Assertion Failed: ${ourAnswer} !== ${answer}`);
